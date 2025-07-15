@@ -15,7 +15,6 @@ Built using **HTML**, **CSS**, **JavaScript**, **Bootstrap**, **GSAP**, and powe
 - 📱 Fully **responsive** across all devices
 - 🎬 Animated **GSAP intro** with smooth scrolling
 - 🖱️ **Custom cursor** & glowing buttons
-- 📱 Mobile-friendly **hamburger menu**
 - 🧼 Clean layout with engaging **UI/UX**
 - 📄 Animated **resume download** button
 
