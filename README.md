@@ -1,153 +1,154 @@
 # 💼 Saki's Portfolio Website
 
 A modern, responsive, and animated showcase of my full-stack web development journey.  
-Built using **HTML**, **CSS**, **JavaScript**, **Bootstrap**, **GSAP**, and powered by an interactive animated particle background.
+Built using **HTML**, **CSS**, **JavaScript**, **Bootstrap**, **GSAP**, and **GitHub API**, powered by an interactive animated background.
 
-[🔗 View Live Demo](https://github.com/SakiAlAmin01/Portfolio---Testwithsaki.com.git)
-
-</div>
+🔗 [Live Demo](https://github.com/SakiAlAmin01/Portfolio---Testwithsaki.com.git)
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
-### ✨ Core Highlights
-- 📱 Fully **responsive** across all devices
-- 🎬 Animated **GSAP intro** with smooth scrolling
-- 🖱️ **Custom cursor** & glowing buttons
-- 🧼 Clean layout with engaging **UI/UX**
-- 📄 Animated **resume download** button
-
-### 📧 Contact Form
-- 🔗 Integrated with **Formspree**
-- ✅ Built-in **form validation** and user feedback
-- 🔄 **Loading**, **success**, and **error** states
-- 📇 Simple contact section with icons
-
-### ⚡ Performance & Optimization
-- 💤 Lazy-loading images
-- 🧠 Optimized animations with `will-change`, `contain`
-- 🛰️ **Offline access** via **Service Worker**
-- 🧩 Full **PWA** support (installable + native feel)
-- ⚙️ Optimized font and CSS loading
+### ✨ Highlights
+- 📱 Fully **responsive** layout across all screen sizes
+- 🎬 Smooth GSAP animations and scroll effects
+- 🖱️ Custom cursor with glowing button hover effects
+- 📄 Animated **Resume Download** button
+- 🌙 Sleek **Dark Theme** with soft transitions
 
 ### 🐙 GitHub Integration
-- 📊 Live **GitHub stats** & top languages
-- 🕒 Displays recent activity
-- 🔌 Works **offline** with fallback support
+- 📊 **Live GitHub stats**, top languages & repo info
+- 🕒 Displays **recent activity**
+- 🔐 Token-secured API access via Netlify Functions (optional)
+- 🔌 Offline fallback for better performance
 
-### 🎨 Enhanced UI/UX
-- 🌙 Sleek **dark theme**
-- 🧩 Soft hover effects & transitions
-- 🖨️ Accessible and **print-friendly**
+### 📧 Contact Form
+- Integrated with **Formspree**
+- ✅ Form validation and error handling
+- 🔄 Real-time loading and success messages
+
+### ⚡ Performance Optimization
+- 💤 Lazy loading for images
+- 🚀 Optimized animations using `will-change` & `contain`
+- 🛰️ **Offline Access** with Service Worker
+- 📲 **PWA Ready** (installable as mobile app)
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **HTML5** – Semantic markup  
-- **CSS3** – Styling with Bootstrap & Tailwind  
-- **JavaScript** – DOM, API integrations  
-- **GSAP** – Animations & scroll triggers  
-- **Particles.js** – Background effects  
-- **Formspree** – Form submissions  
-- **GitHub API** – Repo stats  
-- **Service Worker** – Caching & offline mode  
+- **CSS3** – Tailwind + Bootstrap  
+- **JavaScript** – DOM & API integrations  
+- **GSAP** – Scroll animations  
+- **Particles.js** – Background animation  
+- **Formspree** – Form submission handler  
+- **GitHub API** – Stats, commits, activity  
+- **Service Worker** – Offline caching  
 
 ---
 
-## 📱 Progressive Web App (PWA)
-
-- ✅ **Installable** on mobile/desktop  
-- 📴 **Offline-ready**  
-- ⚡ **Fast-loading** with cache-first strategy  
-- 📲 Native app-like experience  
-
----
-
-## 📂 Project Structure
+## 📦 Project Structure
 
 ```
 
 Portfolio/
-├── index.html          # Main file
-├── styles.css          # Custom styles
-├── script.js           # JS for interactivity & GitHub API
-├── manifest.json       # PWA configuration
-├── sw\.js               # Service Worker
-├── assets/             # Images and icons
-└── README.md           # Project documentation
+├── index.html             # Main HTML file
+├── styles.css             # All custom styles
+├── script.js              # JS logic + GitHub API fetch
+├── manifest.json          # PWA configuration
+├── sw\.js                  # Service Worker for offline
+├── netlify/functions/     # Serverless GitHub function (optional)
+├── assets/                # All static assets (images/icons)
+└── README.md              # Project documentation
 
 ````
 
 ---
 
-## 🔧 Configuration
+## 🔧 Configuration Instructions
 
-### 🔹 Contact Form (Formspree)
+### 🔹 GitHub Stats Setup
+In `script.js`, change the username:
+```js
+const username = "YOUR_GITHUB_USERNAME";
+````
 
-Update the form action in `script.js`:
+If you're using token-protected GitHub data via Netlify function:
+
+* Create `.env` file (not pushed to GitHub):
+
+```env
+GITHUB_TOKEN=your_github_token_here
+```
+
+* In `netlify/functions/github.js`, the function uses that token via `process.env.GITHUB_TOKEN`
+
+### 🔹 Formspree Setup
+
+Update the form endpoint in `script.js`:
 
 ```js
 fetch('https://formspree.io/f/YOUR_FORM_ID', {
-````
-
-### 🔹 GitHub Stats Integration
-
-Update GitHub username in `script.js`:
-
-```js
-const username = "YOUR_GITHUB_USERNAME";
 ```
+
+---
+
+## 📱 PWA Features
+
+* ✅ **Installable** on mobile/desktop
+* 📴 Offline access via cache-first strategy
+* ⚡ Super fast page load with animation preloading
+* 📲 App-like native experience
 
 ---
 
 ## 🧪 Performance Snapshot
 
-* 📊 **Lighthouse Score**: 95+
-* ⚡ **First Contentful Paint (FCP)**: < 1.5s
-* 🖼️ **Largest Contentful Paint (LCP)**: < 2.5s
-* 🔧 **Cumulative Layout Shift (CLS)**: < 0.1
+* 📊 Lighthouse Score: **95+**
+* ⚡ First Contentful Paint: **< 1.5s**
+* 🖼️ Largest Contentful Paint: **< 2.5s**
+* 🔧 Cumulative Layout Shift: **< 0.1**
 
 ---
 
-## 📦 Getting Started
+## 🚀 Getting Started
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/SakiAlAmin01/Portfolio---Testwithsaki.com.git
 cd Portfolio
 
-# Option 1: Run locally with Python
+# 2. Option A: Run with Python (for simple static server)
 python -m http.server 8000
 
-# Option 2: Run with Node.js
+# 3. Option B: Run with Node.js
 npx serve .
 
-# Option 3: Open index.html directly in your browser
+# 4. Option C: Just open index.html in browser
 ```
 
 ---
 
-## ✏️ Customization Guide
+## ✏️ How to Customize
 
-* Update personal content in `index.html`
-* Modify styles in `styles.css`
-* Add your projects in the Projects section
-* Update GitHub username in `script.js`
+* 📝 Edit your content in `index.html`
+* 🎨 Modify styles in `styles.css`
+* 🧠 Update logic or API configs in `script.js`
+* 📂 Add or replace images in `assets/`
+* 🐙 Change GitHub username to fetch your real data
 
 ---
 
 ## 🤝 Contributing
 
-Contributions and suggestions are welcome!
-Feel free to submit a pull request or open an issue.
+Pull requests, feedback, and feature suggestions are most welcome!
+Feel free to fork, modify, or share this project.
 
 ---
 
 ## 📬 Contact Me
 
 * 📧 Email: [sakialaminwork@gmail.com](mailto:sakialaminwork@gmail.com)
-* 💼 LinkedIn: [@Saki Alamin](https://www.linkedin.com/in/sakialamin2000)
+* 💼 LinkedIn: [Saki Al Amin](https://www.linkedin.com/in/sakialamin2000)
 * 🐙 GitHub: [@SakiAlAmin01](https://github.com/SakiAlAmin01)
-
