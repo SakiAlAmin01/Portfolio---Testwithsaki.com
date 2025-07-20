@@ -1,0 +1,15 @@
+{
+  "name": "protfolio-main",
+  "version": "1.0.0",
+  "description": "Saki Al Amin's Portfolio",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Saki Al Amin",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
